@@ -1,0 +1,27 @@
+nav {
+    background-color: #6f8a36;
+    color: #f9f7f7;
+    padding: 10px;
+    margin-bottom: 30px; 
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }  

@@ -1,0 +1,422 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #6f8a3c;
+  color: #f9f7f7;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.image a {
+  color: #333;
+  text-decoration: none;
+}
+
+.image a:hover {
+  text-decoration: underline;
+}
+.gallery {
+  text-align: center;
+}
+
+.gallery h1 {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.images img {
+  display: none;
+  width: 100px;
+  height: auto;
+  margin: 10px;
+  cursor: pointer; /* تغيير المؤشر ليدل على أنه يمكن النقر عليه */
+}
+
+.images img.active {
+  border: 2px solid #333; /* تحديد الصورة النشطة */
+}
+.cta {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+  
+}
+.hover-underline-animation a {
+  text-decoration: none;
+  color: #000;
+}
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.images i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: #13790f;
+  cursor: pointer;
+}
+
+.images i:hover {
+  color: #20500c;
+}
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+span{
+  color: #95b858;
+
+}
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.book {
+  margin: 20px;
+  text-align: center;
+}
+
+.book img {
+  width: 200px;
+  height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+.details h3, .details p {
+  margin: 5px 0;
+}
+
+button {
+  display: flex;
+  padding: 8px 15px;
+  margin-top: 5px;
+  border: none;
+  background-color: #99ce3e;
+  color: #fff;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background-color: #fff;
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+}
+
+.image-container img {
+  width: 100%; /* تعديل حجم الصور حسب الحاجة */
+  max-width: calc(33.33% - 20px);/* لتجنب تجاوز الحجم الأصلي للصور */
+  height: auto;
+}
+.button {
+  width: 180px;
+  height: 40px;
+  background-image: linear-gradient(#75a424, #95cf31);
+  border: none;
+  border-radius: 50px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  box-shadow: 1px 3px 0px #536e24;
+  transition-duration: .3s;
+  flex-wrap: wrap;
+}
+
+.cartIcon {
+  width: 14px;
+  height: fit-content;
+}
+
+.cartIcon path {
+  fill: white;
+}
+
+.button:active {
+  transform: translate(2px ,0px);
+  box-shadow: 0px 1px 0px rgb(52, 69, 28);
+  padding-bottom: 1px;
+}
+
+
+
+header {
+  background-color: #0e5a28;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+/* تنسيق الأقسام */
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  color: #333;
+}
+
+section p {
+  color: #151814;
+}
+
+section ul {
+  list-style-type: none;
+}
+
+section ul li {
+  margin-bottom: 10px;
+}
+
+/* تنسيق التذييل */
+
+footer {
+  background-color: #0b4f21;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  font-size: 0.8em;
+} 
+
+
+.btn-conteiner {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  --color-text: #3e5a43;
+  --color-background: #427836;
+  --color-outline: #48c45280;
+  --color-shadow: #50f95080;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.btn-content {
+  display: flex;
+  align-items: center;
+  padding: 0px 3px;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: 1s;
+  border-radius: 100px;
+  box-shadow: 0 0 0.2em 0 var(--color-background);
+}
+
+.btn-content:hover,
+.btn-content:focus {
+  transition: 0.5s;
+  -webkit-animation: btn-content 1s;
+  animation: btn-content 1s;
+  outline: 0.1em solid transparent;
+  outline-offset: 0.2em;
+  box-shadow: 0 0 0.4em 0 var(--color-background);
+}
+
+.btn-content .icon-arrow {
+  transition: 0.5s;
+  margin-right: 0px;
+  transform: scale(0.6);
+}
+
+.btn-content:hover .icon-arrow {
+  transition: 0.5s;
+  margin-right: 25px;
+}
+
+.icon-arrow {
+  
+  width: 20px;
+  margin-left: 15px;
+  position: relative;
+  top: 6%;
+}
+
+/* SVG */
+#arrow-icon-one {
+  transition: 0.4s;
+  transform: translateX(-60%);
+}
+
+#arrow-icon-two {
+  transition: 0.5s;
+  transform: translateX(-30%);
+}
+
+.btn-content:hover #arrow-icon-three {
+  animation: color_anim 1s infinite 0.2s;
+}
+
+.btn-content:hover #arrow-icon-one {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.6s;
+}
+
+.btn-content:hover #arrow-icon-two {
+  transform: translateX(0%);
+  animation: color_anim 1s infinite 0.4s;
+}
+
+/* SVG animations */
+@keyframes color_anim {
+  0% {
+    fill: rgb(148, 207, 92);
+  }
+
+  50% {
+    fill: var(--color-background);
+  }
+
+  100% {
+    fill: #0a640b;
+  }
+}
+
+/* Button animations */
+@-webkit-keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
+
+@keyframes btn-content {
+  0% {
+    outline: 0.2em solid var(--color-background);
+    outline-offset: 0;
+  }
+}
